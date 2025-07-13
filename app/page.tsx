@@ -27,20 +27,23 @@ const motorcycles = [
   },
 ]
 
+const msg = encodeURIComponent("Olá, eu gostaria de saber quais são as motos disponíveis.");
+const WhatsAppLink = `https://wa.me/5597981227805?text=${msg}`;
+
 
 const links = [
   {
     title: "WhatsApp 1",
     subtitle: "(97) 98122-7805",
     icon: FaWhatsapp,
-    href: "https://wa.me/5597981227805?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20as%20motos%20dispon%C3%ADveis",
+    href: WhatsAppLink,
     color: "bg-green-500 hover:bg-green-600",
   },
   {
     title: "WhatsApp 2",
     subtitle: "(97) 98457-5014",
     icon: FaWhatsapp,
-    href: "https://wa.me/5597984575014?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20as%20motos%20dispon%C3%ADveis",
+    href: WhatsAppLink,
     color: "bg-green-500 hover:bg-green-600",
   },
   {
