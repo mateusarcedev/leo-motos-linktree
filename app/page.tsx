@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { MapPin } from "lucide-react"
 
 const motorcycles = [
@@ -5,6 +6,8 @@ const motorcycles = [
     name: "Honda BIZ",
     cc: "125cc",
     image: "/biz.jpg",
+    width: 1200,
+    height: 800,
     description: "Econômica e confiável para o dia a dia",
     features: ["Automática", "Baixo consumo"],
   },
@@ -12,6 +15,8 @@ const motorcycles = [
     name: "Honda BROS",
     cc: "160cc",
     image: "/bros.jpg",
+    width: 736,
+    height: 490,
     description: "Aventura e versatilidade em qualquer terreno",
     features: ["Trail", "Robusta"],
   },
@@ -19,6 +24,8 @@ const motorcycles = [
     name: "Honda TITAN",
     cc: "160cc",
     image: "/titan.jpg",
+    width: 1600,
+    height: 1200,
     description: "Potência e durabilidade comprovadas",
     features: ["Esportiva", "Ágil"],
   },
@@ -42,9 +49,12 @@ export default function LeoMotosLinktree() {
       {/* Desktop nav */}
       <nav className="hidden md:flex items-center justify-between px-14 py-[18px] border-b border-white/10 bg-[#111110]/90 sticky top-0 z-10">
         <div className="flex items-center gap-3.5">
-          <img
+          <Image
             src="/logo-badge.jpg"
             alt="Leo Motos"
+            width={104}
+            height={104}
+            priority
             className="w-[52px] h-[52px] object-cover rounded-full flex-none"
           />
           <div className="flex flex-col gap-[3px]">
@@ -81,9 +91,12 @@ export default function LeoMotosLinktree() {
       <header className="px-[22px] py-[26px] md:px-14 md:py-16 border-b border-white/10">
         {/* mobile-only compact header */}
         <div className="md:hidden flex items-center gap-3">
-          <img
+          <Image
             src="/logo-badge.jpg"
             alt="Leo Motos"
+            width={120}
+            height={120}
+            priority
             className="w-[60px] h-[60px] object-cover rounded-full flex-none"
           />
           <div className="flex flex-col gap-0.5">
@@ -148,7 +161,15 @@ export default function LeoMotosLinktree() {
           <div className="hidden md:block relative">
             <div className="absolute inset-[24px_-12px_24px_40px] bg-[#e01f10] rounded-2xl" />
             <div className="relative bg-[#f5f3ee] rounded-2xl px-5 py-[26px] flex items-center justify-center">
-              <img src="/bros.jpg" alt="Honda BROS" className="w-full h-[380px] object-contain block" />
+              <Image
+                src="/bros.jpg"
+                alt="Honda BROS"
+                width={736}
+                height={490}
+                priority
+                sizes="(min-width: 768px) 640px, 100vw"
+                className="w-full h-[380px] object-contain block"
+              />
             </div>
             <div className="absolute left-[-8px] bottom-[26px] bg-[#111110] border border-white/[.14] rounded-xl px-[18px] py-3.5">
               <div className="text-[11px] font-medium tracking-[0.14em] text-white/50">EM DESTAQUE</div>
@@ -179,9 +200,12 @@ export default function LeoMotosLinktree() {
               className="bg-[#1b1a19] border border-white/[.08] rounded-xl md:rounded-[14px] overflow-hidden flex flex-col"
             >
               <div className="bg-[#f5f3ee] px-1 py-2 md:p-3.5">
-                <img
+                <Image
                   src={moto.image}
                   alt={moto.name}
+                  width={moto.width}
+                  height={moto.height}
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   className="w-full h-[132px] md:h-[200px] object-contain block"
                 />
               </div>
@@ -321,9 +345,11 @@ export default function LeoMotosLinktree() {
       {/* Footer */}
       <footer className="px-[22px] py-[26px] md:px-14 md:py-[30px] border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div className="flex items-center gap-3 justify-center md:justify-start">
-          <img
+          <Image
             src="/logo-badge.jpg"
             alt="Leo Motos"
+            width={76}
+            height={76}
             className="w-9 h-9 md:w-[38px] md:h-[38px] object-cover rounded-full"
           />
           <div className="text-xs leading-relaxed text-white/40 text-center md:text-left">
