@@ -43,7 +43,7 @@ export default function LeoMotosLinktree() {
       <nav className="hidden md:flex items-center justify-between px-14 py-[18px] border-b border-white/10 bg-[#111110]/90 sticky top-0 z-10">
         <div className="flex items-center gap-3.5">
           <img
-            src="/logo-badge.png"
+            src="/logo-badge.jpg"
             alt="Leo Motos"
             className="w-[52px] h-[52px] object-cover rounded-full flex-none"
           />
@@ -82,7 +82,7 @@ export default function LeoMotosLinktree() {
         {/* mobile-only compact header */}
         <div className="md:hidden flex items-center gap-3">
           <img
-            src="/logo-badge.png"
+            src="/logo-badge.jpg"
             alt="Leo Motos"
             className="w-[60px] h-[60px] object-cover rounded-full flex-none"
           />
@@ -322,7 +322,7 @@ export default function LeoMotosLinktree() {
       <footer className="px-[22px] py-[26px] md:px-14 md:py-[30px] border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div className="flex items-center gap-3 justify-center md:justify-start">
           <img
-            src="/logo-badge.png"
+            src="/logo-badge.jpg"
             alt="Leo Motos"
             className="w-9 h-9 md:w-[38px] md:h-[38px] object-cover rounded-full"
           />

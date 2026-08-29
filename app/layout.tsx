@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Leo Motos',
   description: 'Aluguel de motos em Tefé, Amazonas.',
   icons: {
-    icon: '/logo_leo_motos.png',
+    icon: '/logo_leo_motos.jpg',
   },
 }
 
